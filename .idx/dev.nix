@@ -16,10 +16,6 @@
 
   # Sets environment variables in the workspace
   env = {
-    AWS_ACCESS_KEY_ID="AKIAZDZTBM3OPX4R3GK6";
-    AWS_SECRET_ACCESS_KEY="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";
-    AWS_REGION="us-east-1";
-
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
