@@ -1,10 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y --no-install-recommends \
-        tree \
-        curl \
-        unzip \
-        ca-certificates \
-        jq \
-    && rm -rf /var/lib/apt/lists/*
+# use this Dockerfile to install additional tools you might need, e.g.
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#     && apt-get -y install --no-install-recommends <your-package-list-here>
