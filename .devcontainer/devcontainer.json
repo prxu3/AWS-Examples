@@ -1,19 +1,29 @@
-// The Dev Container format allows you to configure your environment. At the heart of it
-// is a Docker image or Dockerfile which controls the tools available in your environment.
-//
-// See https://aka.ms/devcontainer.json for more information.
 {
-    "name": "AWS CLI Environment",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/features/aws-cli:1": {}
+    "name": "AWS Examples Codespace",
+    "build": {
+        "dockerfile": "Dockerfile"
     },
-    "postCreateCommand": "aws --version",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        },
+        "ghcr.io/devcontainers/features/aws-cli:1": {},
+        "ghcr.io/devcontainers/features/terraform:1": {
+            "version": "latest"
+        }
+    },
+    "containerEnv": {
+        "AWS_CLI_AUTO_PROMPT": "on-partial"
+    },
+    "postCreateCommand": "npm install -g aws-cdk && cdk --version && aws --version && terraform version && tree --version",
     "customizations": {
         "vscode": {
             "extensions": [
-                "amazonwebservices.aws-toolkit-vscode"
+                "amazonwebservices.aws-toolkit-vscode",
+                "hashicorp.terraform",
+                "ms-azuretools.vscode-docker"
             ]
         }
-    }
+    },
+    "remoteUser": "vscode"
 }
