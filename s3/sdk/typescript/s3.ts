@@ -1,6 +1,8 @@
 import { CreateBucketCommand, S3Client } from "@aws-sdk/client-s3";
 
-const bucketName = process.env.BUCKET_NAME;
+const bucketName = (globalThis as typeof globalThis & {
+  process?: { env?: Record<string, string | undefined> };
+}).process?.env?.BUCKET_NAME;
 if (!bucketName) {
   throw new Error("BUCKET_NAME environment variable is required");
 }
