@@ -12,7 +12,7 @@
     "containerEnv": {
         "AWS_CLI_AUTO_PROMPT": "on-partial"
     },
-    "postCreateCommand": "npm install -g aws-cdk && cdk --version && aws --version && terraform version && sudo apt-get update && sudo apt-get install -y tree && npm --prefix s3/sdk/typescript install",
+    "postCreateCommand": "npm install -g aws-cdk && npm install -g typescript && cdk --version && aws --version && terraform version && sudo apt-get update && sudo apt-get install -y tree && npm --prefix s3/sdk/typescript install",
     "customizations": {
         "vscode": {
             "extensions": [
