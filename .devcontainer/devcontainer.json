@@ -7,10 +7,7 @@
         "ghcr.io/devcontainers/features/node:1": {
             "version": "lts"
         },
-        "ghcr.io/devcontainers/features/aws-cli:1": {},
-        "ghcr.io/devcontainers/features/terraform:1": {
-            "version": "latest"
-        }
+        "ghcr.io/devcontainers/features/aws-cli:1": {}
     },
     "containerEnv": {
         "AWS_CLI_AUTO_PROMPT": "on-partial"
