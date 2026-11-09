@@ -12,6 +12,11 @@
     <main>
         <h1>Welcome to My Website</h1>
     </main>
+    <script>
+    fetch("http://<your-bucket-name-2>.s3-website-us-east-1.amazonaws.com/data.json")
+    .then(res => res.json())
+    .then(data => alert("Hello from other Bucket"))
+    .catch(err => console.error(err));
+    </script>
 </body>
-
 </html>
