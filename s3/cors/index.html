@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-
+    <title>My Website!!!!</title>
 </head>
 
 <body>
     <main>
         <h1>Welcome to My Website</h1>
+        <p>What do you think of my amazing Website!</p>
     </main>
     <script>
-    fetch("http://<your-bucket-name-2>.s3-website-us-east-1.amazonaws.com/data.json")
-    .then(res => res.json())
-    .then(data => alert("Hello from other Bucket"))
-    .catch(err => console.error(err));
+        fetch("http://px-cors-bucket-2.s3-website-us-east-1.amazonaws.com/data.json")
+            .then(res => res.json())
+            .then(data => alert("Hello from other Bucket"))
+            .catch(err => console.error(err));
     </script>
 </body>
+
 </html>

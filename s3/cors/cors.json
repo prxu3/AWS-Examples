@@ -1,16 +1,19 @@
-[
-    {
-        "AllowedOrigins": [
-            "http://<your-bucket-name>.s3-website.us-east-1.amazonaws.com"
-        ],
-        "AllowedMethods": [
-            "GET",
-            "POST",
-            "PUT",
-            "DELETE"
-        ],
-        "AllowedHeaders": [
-            "*"
-        ]
-    }
-]
+{
+    "CORSRules": [
+        {
+            "AllowedOrigins": [
+                "http://px-cors-bucket.s3-website.us-east-1.amazonaws.com"
+            ],
+            "AllowedHeaders": [
+                "*"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "MaxAgeSeconds": 3000,
+            "ExposeHeaders": [
+                "x-amz-server-side-encryption"
+            ]
+        }
+    ]
+}
