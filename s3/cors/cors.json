@@ -1,0 +1,16 @@
+[
+    {
+        "AllowedOrigins": [
+            "http://<your-bucket-name>.s3-website.ca-central-1.amazonaws.com"
+        ],
+        "AllowedMethods": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ],
+        "AllowedHeaders": [
+            "*"
+        ]
+    }
+]
