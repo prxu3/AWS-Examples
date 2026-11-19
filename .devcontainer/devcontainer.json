@@ -13,6 +13,7 @@
         "AWS_CLI_AUTO_PROMPT": "on-partial"
     },
     "postCreateCommand": "./.devcontainer/post-create-setup.sh",
+    "postStartCommand": "git config commit.gpgsign false",
     "customizations": {
         "vscode": {
             "extensions": [
